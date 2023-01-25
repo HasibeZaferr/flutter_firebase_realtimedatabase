@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../models/lesson.dart';
 import '../network_utils/firebase/lesson_list_data_manager.dart';
 import '../utilities/colors.dart';
 import '../utilities/constant.dart';
+import 'learn_page_detail.dart';
 
 class LearnPage extends StatefulWidget {
   const LearnPage({Key? key}) : super(key: key);
@@ -116,7 +118,15 @@ class _LearnPageState extends State<LearnPage> {
 
   Widget lessonListItem(Lesson lesson) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        PersistentNavBarNavigator.pushNewScreen(
+          context,
+          screen: LearnPageDetail(
+              detailPageUrl: lesson.lessonDetailLink,
+              detailImage: lesson.lessonCoverImageUrl),
+          withNavBar: false,
+        );
+      },
       child: Column(
         children: [
           Card(
@@ -160,16 +170,24 @@ class _LearnPageState extends State<LearnPage> {
                         width: 80.0,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(lesson.lessonDayText,style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600,color: colorDayText,),textAlign: TextAlign.center,),
+                          child: Text(
+                            lesson.lessonDayText,
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w600,
+                              color: colorDayText,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-
                       Expanded(
-                          child: Image.asset(
-                            iconListDetail,
-                            height: 20,
-                            alignment: Alignment.bottomRight,
-                          ),),
+                        child: Image.asset(
+                          iconListDetail,
+                          height: 20,
+                          alignment: Alignment.bottomRight,
+                        ),
+                      ),
                     ],
                   ),
                 ),
