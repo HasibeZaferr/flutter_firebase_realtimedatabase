@@ -7,3 +7,4 @@ const double bottomBarIconHeight= 20.0;
 const String iconPathLearn = 'assets/icons/ic_learn.png';
 const String iconPathWatch= 'assets/icons/ic_watch.png';
 const String iconPathEvents = 'assets/icons/ic_events.png';
+const String imageHeader = 'assets/images/learn_flutter.png';
