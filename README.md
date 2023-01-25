@@ -1,16 +1,12 @@
-# learn_flutter
+![](https://github.com/HasibeZaferr/flutter_firebase_realtimedatabase/blob/master/assets/images/flutter-firebase.gif)
 
-A new Flutter project.
+## Dynamic E ducation App - Flutter Firebase Realtime Database with http 👑 It’s a magic 🎩
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Design & Packages
 
-A few resources to get you started if this is your first Flutter project:
+I chose to make this design available for free on Figma. 
+- [Figma Design ](https://www.figma.com/community/file/1200196950967358468)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I use introduction_screen packages
+- [You can access the detailed article on my medium account.](https://hasibezafer.medium.com/flutter-firebase-realtime-database-with-http-its-a-magic-dbc7403c3c73)
